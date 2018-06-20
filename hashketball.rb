@@ -94,7 +94,15 @@ def big_shoe_rebounds
   var[1][:rebounds]
 end
 
-
+def find_by_number(number)
+  game_hash.each do |sides, info|
+    info[:players].each do |player_name, stats|
+      if number == stats[:number]
+        return player_name
+      end
+    end
+  end
+end
 
 
 
